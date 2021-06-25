@@ -1,0 +1,245 @@
+@import 'https://use.fontawesome.com/releases/v5.13.0/css/all.css';
+
+* {
+    margin: 0;
+}
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 150px;
+    z-index: 9;
+}
+.logo img {
+    width: 100%;
+}
+#backToLobbyBtn {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 5px 10px;
+    color: white;
+    z-index: 9;
+    background-color: rgb(52, 52, 97);
+    border-radius: 20px;
+}
+#backToLobbyBtn:hover {
+    cursor: pointer;
+    background-color: rgb(82, 82, 156);
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    /*background-color: rgb(226, 226, 226);*/
+    background: linear-gradient(rgb(180, 190, 221), 60%, rgb(209, 196, 211));
+}
+
+#works {
+    width: 90%;
+    position: relative;
+    min-width: 370px;
+    background-color: rgb(246, 246, 246);
+    max-width: min(calc((88vh - 80px - 5vh) * 16 / 9), 1100px);
+    aspect-ratio: 16 / 9;
+    margin-top: 12vh;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+#works > .worksContent {
+    width: 90%;
+    height: 90%;
+}
+
+#topbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: max(-50px, -12vh);
+    left: 0;
+    right: 0;
+    width: 50%;
+    min-width: 280px;
+    max-height: 50px;
+    margin: auto;
+    padding: 8px 10px;
+    border-radius: 10px;
+    background-color: rgba(0, 19, 58, 0.794);
+    box-shadow: rgba(170, 170, 170, 0.25) 0px 54px 55px,
+        rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+        rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    transition: all 0.5s;
+}
+
+#topbar.isOpen {
+    left: -1000px;
+    right: -1000px;
+    width: 90vw;
+    max-height: 80vh;
+    background-color: rgba(0, 11, 32, 0.9);
+    z-index: 99;
+}
+
+#title_and_detailBtn {
+    width: 100%;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+}
+
+#detail {
+    height: 0;
+    opacity: 0;
+}
+
+#detail.isOpen {
+    height: 100vh;
+    opacity: 1;
+    color: white;
+}
+
+#works .title {
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: bold;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: rgb(255, 255, 255);
+    top: -34px;
+}
+
+#works #detailBtn {
+    color: white;
+    display: flex;
+    font-size: 15px;
+    line-height: 15px;
+    vertical-align: baseline;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10px;
+    min-width: 80px;
+}
+
+#works #detailBtn:hover {
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+
+#works #arrow {
+    margin: 0px 5px;
+}
+
+#members {
+    position: relative;
+    top: -10px;
+    min-height: 5vh;
+    height: 100px;
+    z-index: 2;
+    width: 100%;
+}
+
+.member {
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.member.exist {
+    opacity: 1;
+}
+
+.member.gone {
+    opacity: 0;
+}
+
+.buttons_all {
+    display: flex;
+    flex-direction: column;
+}
+
+.buttons_upper {
+    width: 100%;
+    height: 15vh;
+    min-height: 80px;
+    z-index: 2;
+
+    /*background: linear-gradient(rgb(98, 98, 98), rgb(0, 0, 0));*/
+    display: flex;
+    justify-content: center;
+    overflow: visible;
+}
+
+.reactBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 7vh;
+    min-width: 50px;
+    height: 7vh;
+    min-height: 50px;
+    margin: 10px 20px 5px 20px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    /*background-color: #008000; ←元の背景色は不要なので削除*/
+    border-radius: 20%;
+    text-align: center;
+    box-shadow: 0 6px 5px 0px #838383;
+    transform: translateY(-6px);
+    transition: 0.1s all;
+    overflow: visible;
+
+    /*↓コピーしたCSSをここに追加↓*/
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#0ba500+0,008000+100 */
+    background: #ffffff; /* Old browsers */
+}
+
+.reactBtn:hover {
+    cursor: pointer;
+}
+
+.reactBtn:active {
+    box-shadow: 0 2px 0 0 #6e6e6e;
+    transform: translateY(-2px);
+}
+
+.BtnImg {
+    display: block;
+    width: 80%;
+}
+
+.myReaction {
+    transition: all 1s ease-out;
+}
+
+.myReaction.disappeared {
+    transform: translateY(-40vh);
+    opacity: 0;
+}
+
+.othersReaction {
+    transition: all 1s ease-out;
+}
+
+.othersReaction.disappeared {
+    transform: translateY(-5vh);
+    opacity: 0;
+}
