@@ -26,7 +26,7 @@ const createMember = (n_memberId) => {
             50 +
             ((Math.random() - 0.5) * worksElement.offsetWidth * 90) /
                 window.innerWidth;
-        peopleImg.setAttribute('src', `./assets/people/${peopletype}.SVG`);
+        peopleImg.setAttribute('src', `./assets/people/${peopletype}.PNG`);
         people.setAttribute('id', n_memberId);
         people.classList.add('member');
         people.style.position = 'absolute';
