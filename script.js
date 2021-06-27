@@ -149,6 +149,10 @@ document.getElementById('backToLobbyBtn').addEventListener('click', () => {
     window.location.href = lobby_path;
 });
 
+document.getElementById('nextButton').addEventListener('click', () => {
+    window.location.href = './';
+});
+
 //socket通信が確立したタイミングで、サーバーに対して一度メンバーリストを送信するように要求を行う
 socket.on('connect', () => {
     console.log(`connected! ${socket.id}`);
